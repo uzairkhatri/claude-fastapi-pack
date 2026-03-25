@@ -147,13 +147,62 @@ See the [full walkthrough](examples/fastapi-sample-app/before_after/WALKTHROUGH.
 - `architecture-enforcer` — enforce Router → Service → Repository separation
 
 ### Commands
-- `/design-api` — design a new API feature end to end
-- `/implement-api` — scaffold implementation steps
-- `/review-async` — review async code for safety issues
-- `/check-migration` — validate Alembic migrations before deploy
-- `/review-api` — full API review against architecture rules
-- `/plan-feature` — plan a feature from requirements
-- `/refactor` — refactor toward clean architecture
+
+**`/design-api <feature>`**
+Turns a feature requirement into a full production-ready structure.
+Outputs: endpoints, request/response schemas, service responsibilities, data layer breakdown, edge cases, and implementation order.
+```
+/design-api Build a notification API with read/unread status
+```
+
+**`/implement-api <feature>`**
+Converts a feature idea into a step-by-step implementation plan.
+Outputs: endpoint definitions, file breakdown, service flow, DB operations, error cases, and a task checklist ready to execute.
+```
+/implement-api Add JWT authentication to the users module
+```
+
+**`/review-async <file>`**
+Reviews async FastAPI and SQLAlchemy code for hidden production issues.
+Outputs: blocking calls, session misuse, N+1 queries, concurrency risks, and safer patterns.
+```
+/review-async app/projects/router.py
+```
+
+**`/fix-async <file>`**
+Same as `/review-async` but applies all fixes directly to the file.
+Outputs: fixed code + a summary table of every change made and why.
+```
+/fix-async app/projects/router.py
+```
+
+**`/review-api <file>`**
+Full API contract review — correctness, security, HTTP semantics, auth gaps.
+Outputs: must-fix issues, suggestions, API contract table (auth, status codes, response models), and a final APPROVE / REQUEST CHANGES verdict.
+```
+/review-api app/users/router.py
+```
+
+**`/check-migration <file>`**
+Reviews Alembic migrations for production risk before they run.
+Outputs: risk level, destructive operations, nullability/backfill issues, rollback concerns, and a safer rollout plan.
+```
+/check-migration alembic/versions/002_add_status_column.py
+```
+
+**`/plan-feature <feature>`**
+Generates a full implementation plan before writing any code.
+Outputs: architecture decisions, file checklist, implementation order, test checklist (happy path + edge cases + errors), and risk flags.
+```
+/plan-feature Add subscription billing with Stripe
+```
+
+**`/refactor <file>`**
+Paste a messy file, get back clean code split across the correct layers.
+Outputs: a layer map showing where each piece of code belongs, then complete `router.py`, `service.py`, `repository.py`, and `schemas.py` files, plus a before/after summary.
+```
+/refactor app/orders.py
+```
 
 ### Skills
 Reusable knowledge loaded automatically:
