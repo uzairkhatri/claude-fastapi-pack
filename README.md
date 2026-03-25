@@ -1,8 +1,9 @@
 # Claude FastAPI Pack
+### FastAPI Architecture Enforcement with Claude
 
-> Stop using Claude like ChatGPT. Use it like a backend architect.
+> Stop writing messy FastAPI code. Let Claude enforce clean architecture.
 
-Turn Claude into a FastAPI architect and reviewer that catches async issues, enforces clean architecture, and validates migrations — before they hit production.
+The only Claude repo built specifically for FastAPI developers — plug-and-play agents that enforce architecture, catch async bugs, and validate migrations before they hit production.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Claude](https://img.shields.io/badge/Claude-Code-purple)
@@ -20,6 +21,26 @@ Turn Claude into a FastAPI architect and reviewer that catches async issues, enf
 ✅ Design FastAPI features with clean Router → Service → Repository separation
 ✅ Review async + SQLAlchemy code for hidden production issues
 ✅ Catch migration risks before they hit staging or prod
+
+---
+
+## 💥 What Claude Does
+
+Input:
+```
+/design-api Build notification API
+```
+
+Output:
+```
+✔ routes
+✔ services
+✔ schemas
+✔ edge cases
+✔ implementation plan
+```
+
+In seconds.
 
 ---
 
