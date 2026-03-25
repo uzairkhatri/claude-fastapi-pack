@@ -2,9 +2,7 @@
 
 > Stop using Claude like ChatGPT. Use it like a backend architect.
 
-🚀 Turn Claude into a production-ready FastAPI backend architect
-
-Design APIs, review async code, catch migration risks, and enforce clean architecture — in seconds.
+Turn Claude into a FastAPI architect and reviewer that catches async issues, enforces clean architecture, and validates migrations — before they hit production.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Claude](https://img.shields.io/badge/Claude-Code-purple)
@@ -12,6 +10,16 @@ Design APIs, review async code, catch migration risks, and enforce clean archite
 [![GitHub Stars](https://img.shields.io/github/stars/uzairkhatri/claude-fastapi-pack?style=social)](https://github.com/uzairkhatri/claude-fastapi-pack)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![FastAPI](https://img.shields.io/badge/FastAPI-ready-blue)
+
+---
+
+![Demo](assets/screenshots/demo.gif)
+
+---
+
+✅ Design FastAPI features with clean Router → Service → Repository separation
+✅ Review async + SQLAlchemy code for hidden production issues
+✅ Catch migration risks before they hit staging or prod
 
 ---
 
@@ -50,12 +58,6 @@ With this pack, Claude becomes your:
 - 🛡️ Migration Safety Guard
 - ⚙️ API Designer
 - 👨‍💻 PR Reviewer
-
----
-
-## 🎥 Demo
-
-![Demo](assets/screenshots/demo.gif)
 
 ---
 
