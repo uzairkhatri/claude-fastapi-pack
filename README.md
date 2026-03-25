@@ -10,7 +10,6 @@ Design APIs, review async code, catch migration risks, and enforce clean archite
 ![Claude](https://img.shields.io/badge/Claude-Code-purple)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green)
 [![GitHub Stars](https://img.shields.io/github/stars/uzairkhatri/claude-fastapi-pack?style=social)](https://github.com/uzairkhatri/claude-fastapi-pack)
-![GitHub stars](https://img.shields.io/github/stars/uzairkhatri/claude-fastapi-pack)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![FastAPI](https://img.shields.io/badge/FastAPI-ready-blue)
 
@@ -227,7 +226,8 @@ Both copy agents, commands, and skills into your project's `.claude/` directory 
 
 ---
 
-## Folder Structure
+<details>
+<summary>📁 Folder Structure</summary>
 
 ```text
 .claude/
@@ -254,6 +254,8 @@ Both copy agents, commands, and skills into your project's `.claude/` directory 
     └── rest-response-standard.md
 ```
 
+</details>
+
 ---
 
 ## Example App
@@ -269,3 +271,12 @@ See [`examples/fastapi-sample-app/`](examples/fastapi-sample-app/) for a full re
 - [Commands Guide](docs/commands-guide.md)
 - [Contributing](CONTRIBUTING.md)
 - [Changelog](CHANGELOG.md)
+
+---
+
+## ⭐ Support This Project
+
+If this pack saved you time or helped your team ship cleaner FastAPI code — star the repo.
+It helps other backend developers find it.
+
+[![GitHub Stars](https://img.shields.io/github/stars/uzairkhatri/claude-fastapi-pack?style=social)](https://github.com/uzairkhatri/claude-fastapi-pack)
