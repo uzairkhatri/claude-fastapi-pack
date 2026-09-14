@@ -1,9 +1,11 @@
 # Claude FastAPI Pack
 ### FastAPI Architecture Enforcement with Claude
 
-> Stop writing messy FastAPI code. Let Claude enforce clean architecture.
+> Give Claude Code explicit architecture and review guardrails for FastAPI work.
 
-The only Claude repo built specifically for FastAPI developers — plug-and-play agents that enforce architecture, catch async bugs, and validate migrations before they hit production.
+A focused set of agents, commands, and reusable engineering rules for designing FastAPI features, reviewing async/SQLAlchemy code, checking migrations, and keeping backend changes aligned with an intentional architecture.
+
+**Built by [Uzair Khatri](https://uzairkhatri.com) · Production AI Systems Architect**
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Claude](https://img.shields.io/badge/Claude-Code-purple)
@@ -46,15 +48,9 @@ In seconds.
 
 ## 🚨 Why This Is Different
 
-Most Claude repos:
-- share prompts
-- explain concepts
-- give generic workflows
+This pack is deliberately narrow: **FastAPI architecture and production-oriented review workflows**.
 
-This repo:
-- gives plug-and-play agents
-- enforces real backend architecture
-- focuses on production FastAPI systems
+Instead of one general-purpose prompt, it separates responsibilities across architecture, implementation, async review, migration safety, API review, and PR review. The rules are visible in the repository, so teams can inspect and adapt them to their own conventions.
 
 ---
 
@@ -255,13 +251,16 @@ Reusable knowledge loaded automatically:
 
 ## 🧠 How It Works
 
-Clean separation enforced by every agent and command:
+The default opinion is a clean separation of concerns:
 
 - Route → Service → Repository
 - Safer async patterns
-- Structured responses
+- Structured request/response contracts
+- Explicit migration and review checks
 
-> Use Claude like a production backend teammate.
+These are **engineering guardrails, not a substitute for project-specific judgment**. Review generated plans and code against your own architecture, tests, security requirements, and deployment constraints.
+
+> Use Claude as an engineering assistant with visible rules and deterministic verification wherever possible.
 
 ---
 
@@ -343,6 +342,14 @@ See [`examples/fastapi-sample-app/`](examples/fastapi-sample-app/) for a full re
 - [Commands Guide](docs/commands-guide.md)
 - [Contributing](CONTRIBUTING.md)
 - [Changelog](CHANGELOG.md)
+
+---
+
+## Production engineering philosophy
+
+A good AI coding workflow should make changes easier to review, not merely faster to generate. This project therefore favors explicit architecture, scoped responsibilities, migration safety, and review commands over unrestricted code generation.
+
+For more on production AI architecture, see **[uzairkhatri.com](https://uzairkhatri.com)**.
 
 ---
 
