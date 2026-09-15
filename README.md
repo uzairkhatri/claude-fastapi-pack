@@ -7,6 +7,26 @@ A focused set of agents, commands, and reusable engineering rules for designing 
 
 **Built by [Uzair Khatri](https://uzairkhatri.com) · Production AI Systems Architect**
 
+### Architecture at a glance
+
+```text
+Feature / Change
+      │
+      ▼
+Architecture ──► API Design ──► Implementation Plan
+      │                │
+      ▼                ▼
+Async / DB Review   Migration Safety
+      └────────┬─────────┘
+               ▼
+          PR / API Review
+               │
+               ▼
+           Human Decision
+```
+
+The pack makes its rules visible: responsibilities are split across focused agents and commands so generated work can be reviewed against explicit architecture and safety expectations.
+
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Claude](https://img.shields.io/badge/Claude-Code-purple)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green)
@@ -42,7 +62,7 @@ Output:
 ✔ implementation plan
 ```
 
-In seconds.
+The exact output and runtime depend on the model, repository and project context.
 
 ---
 
@@ -166,7 +186,7 @@ See the [full walkthrough](examples/fastapi-sample-app/before_after/WALKTHROUGH.
 ### Commands
 
 **`/design-api <feature>`**
-Turns a feature requirement into a full production-ready structure.
+Turns a feature requirement into a structured architecture proposal.
 Outputs: endpoints, request/response schemas, service responsibilities, data layer breakdown, edge cases, and implementation order.
 ```
 /design-api Build a notification API with read/unread status
@@ -277,7 +297,7 @@ Then inside Claude Code:
 /design-api Build notification API
 ```
 
-Done.
+Review the generated architecture and implementation plan against your project's conventions before applying changes.
 
 <details>
 <summary>Other install options</summary>
